@@ -1,0 +1,38 @@
+{
+	"schemaVersion": 1,
+	"id": "mute-sound-when-away",
+	"version": "${version}",
+	"name": "mute-sound-when-away",
+	"description": "Automatically mutes Minecraft when you alt-tab out and restores volume when you return",
+	"authors": [
+		"Me!"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/mute-sound-when-away/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"ninja.trek.mute.Mutesoundwhenaway"
+		],
+		"client": [
+			"ninja.trek.mute.MutesoundwhenawayClient"
+		]
+	},
+	"mixins": [
+		"mute-sound-when-away.mixins.json",
+		{
+			"config": "mute-sound-when-away.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.18.3",
+		"minecraft": "~1.21.10",
+		"java": ">=21",
+		"fabric-api": "*"
+	}
+}

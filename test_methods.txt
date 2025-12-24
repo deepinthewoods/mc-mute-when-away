@@ -1,0 +1,12 @@
+Based on Mojang official mappings for Minecraft 1.21.x, trying these possibilities:
+
+Window class methods (for GLFW handle):
+- window.window (field access)
+- window.handle (field access)
+- window.getWindow()
+- window.getHandle()
+
+Options sound volume methods:
+- options.getSoundSourceVolume(SoundSource.MASTER)
+- options.getSoundSourceOption(SoundSource.MASTER).get()
+- options.soundSourceVolumes.get(SoundSource.MASTER)
